@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.game-container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.game-info {
+  margin-bottom: 2rem;
+}
+
+.current-player {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+#current-player {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+.game-status {
+  font-size: 1.1rem;
+  color: #666;
+  min-height: 1.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  background-color: #333;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cell {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.cell:hover {
+  background-color: #f8f9fa;
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+.cell.taken:hover {
+  background-color: white;
+}
+
+.cell.X {
+  color: #e74c3c;
+}
+
+.cell.O {
+  color: #3498db;
+}
+
+.game-controls {
+  margin-top: 1rem;
+}
+
+#reset-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#reset-btn:hover {
+  background: #0056b3;
+}
+
+/* Game status styling */
+.status-winner {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.status-draw {
+  color: #ffc107;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .board {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cell {
+    font-size: 2.5rem;
+  }
+} 

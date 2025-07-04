@@ -1,0 +1,92 @@
+<!-- JavaScript Test 3: Tic Tac Toe Game -->
+<!--
+Task: Create a fully functional tic-tac-toe game using vanilla JavaScript.
+
+Key Requirements:
+
+1. Game Board:
+   - 3x3 grid of clickable cells
+   - Start with all cells empty
+   - Visual feedback for cell interactions (hover effects)
+
+2. Game Logic:
+   - Players alternate between X and O
+   - X always goes first
+   - Input validation: prevent clicking occupied cells or after game ends
+   - Track game state in a data structure
+
+3. User Interface:
+   - Display current player indicator
+   - Show game status messages
+   - Reset button to start a new game
+   - Clean, responsive design
+
+4. Win/Draw Detection:
+   - Check for winning combinations after each move
+   - Detect draw when board is full with no winner
+   - Display appropriate winner/draw messages
+   - End game when win or draw is detected
+
+5. Technical Requirements:
+   - Use vanilla JavaScript only (no libraries)
+   - Event listeners for user interactions
+   - DOM manipulation for updates
+   - Clean, readable code structure
+   - Proper variable naming and organization
+
+Files to create:
+- index.html (game structure and layout)
+- styles.css (game styling and visual design)
+- script.js (game logic and functionality)
+
+Testing Criteria:
+- Game functionality and logic
+- Input validation and error handling
+- User experience and interface design
+- Code organization and readability
+- Proper use of JavaScript fundamentals
+
+Note: You can view the expected result in the demo folder to see how the game should function, but implement your own solution!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Test 3 - Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    
+    <div class="game-info">
+      <div class="current-player">
+        Current Player: <span id="current-player">X</span>
+      </div>
+      <div class="game-status" id="game-status">
+        Click a cell to start playing!
+      </div>
+    </div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div class="game-controls">
+      <button id="reset-btn" onclick="resetGame()">Reset Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
